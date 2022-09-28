@@ -3,6 +3,9 @@ const Validate = (values) => {
   if (!values.name) {
     errors.name = '* Name is required';
   }
+  else if (!values.name.match(/^[a-zA-Z\\s]*$/i)) {
+    errors.name = "* Invalid characters"
+  }
   if (!values.email) {
     errors.email = '* Email is required';
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
