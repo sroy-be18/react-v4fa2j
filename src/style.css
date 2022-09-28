@@ -3,11 +3,11 @@
     'Lucida Sans', Arial, sans-serif;
 }
 body {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgba(39, 50, 104, 0),
     rgba(39, 50, 104, 0.5)
-  );
+  ); */
 }
 .container {
   display: flex;
