@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from './Input';
 import validation from './Validate';
 import { useState, useEffect } from 'react';
 const SignUp = ({ submitForm }) => {
@@ -67,33 +68,51 @@ const SignUp = ({ submitForm }) => {
           <div className="upper-two">
             <div className="input-container">
               <label>Name</label>
-              <input
+              <Input
+                type="text"
+                title="name"
+                value={values}
+                handleChange={handleChange}
+              />
+              {/* <input
                 type="text"
                 name="name"
                 value={values.name}
                 onChange={handleChange}
-              ></input>
+              ></input> */}
               {errors.name && <p className="error">{errors.name}</p>}
             </div>
             <div className="input-container">
               <label>Email</label>
-              <input
+              <Input
+                type="email"
+                title="email"
+                value={values}
+                handleChange={handleChange}
+              />
+              {/* <input
                 type="email"
                 name="email"
                 value={values.email}
                 onChange={handleChange}
-              ></input>
+              ></input> */}
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
           </div>
           <div className="input-container">
             <label>Password</label>
-            <input
+            <Input
+              type="password"
+              title="password"
+              value={values}
+              handleChange={handleChange}
+            />
+            {/* <input
               type="password"
               name="password"
               value={values.password}
               onChange={handleChange}
-            ></input>
+            ></input> */}
             {errors.password && <p className="error">{errors.password}</p>}
           </div>
           <div className="terms-checkbox">
